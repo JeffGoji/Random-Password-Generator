@@ -2,12 +2,12 @@
 
 This is a random password generator project built as part of the Rice University Full-Stack Bootcamp.
 Click on the Generate Password button and you will be given the following prompts, choose which options you would or would not like and the generator will return a password of your selections in a random assortment.
-Press Generate Password and you are greeted with the following options:
-Select the number of characters you would like (8 to 128).
-Select if you want Numbers.
-Select if you want Special Characters.
-Select if you want Uppercase Letters.
-Select if you want Lower Case Letters.
+markup *Press Generate Password and you are greeted with the following options:
+- Select the number of characters you would like (8 to 128).
+- Select if you want Numbers.
+- Select if you want Special Characters.
+- Select if you want Uppercase Letters.
+- Select if you want Lower Case Letters.
 
 Please note, you must make at least one selection of the above options to generate a random password.
 
