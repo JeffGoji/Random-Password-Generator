@@ -72,22 +72,20 @@ alpha2 = alpha.map(toUpper);
 var get = document.querySelector("#generate");
 
 get.addEventListener("click", function () {
-  ps = generatePassword();
+  ps = writePassword();
   document.getElementById("password").placeholder = ps;
 });
 
 //Start function to generate password:
-function generatePassword() {
+function writePassword() {
   //Ask for the user input:
   enter = parseInt(
-    prompt(
-      "How many characters would you like in your password? Choose between 8 and 128 characters"
-    )
+    prompt("Choose between 8 and 128 characters for your password")
   );
 
   //First IF statement for user validation:
   if (!enter) {
-    alert("This needs a value!");
+    alert("Please enter a value!");
   } else if (enter < 8 || enter > 128) {
     //Validates user's input
     //Start user input prompts:
@@ -159,4 +157,23 @@ function generatePassword() {
   else if (confirmUppercase) {
     choices = space.concat(alpha2);
   }
+
+  //password variable is an array placeholder for user generated amount of length
+  var password = [];
+
+  //Start our Random selection of Variables:
+  for (var i = 0; i < enter; i++) {
+    var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+    password.push(pickChoices);
+  }
+
+  //This joins password array and converts it to a string.
+  var ps = password.join("");
+  UserInput(ps);
+  return ps;
+}
+
+//This places password into text area.
+function UserInput(ps) {
+  document.getElementById("password").textContent = ps;
 }
